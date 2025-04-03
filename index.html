@@ -3,30 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Basic Website</title>
+  <title>Video Analysis</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to My Website</h1>
+    <h1>Video Analysis</h1>
+    <h2>TURN HOURS INTO MINUTES</h2>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+      <a href="#" onclick="showSection('home')">Home</a>
+      <a href="#" onclick="showSection('about')">About</a>
+      <a href="#" onclick="showSection('contact')">Contact</a>
     </nav>
   </header>
 
   <main>
-    <h2>Hello, World!</h2>
-    <p>This is a simple HTML website with external CSS and JavaScript. As the new website is still under testing</p>
+    <section id="home-section">
+      <h2>Hello, World!</h2>
+      <p>This is a simple HTML website with external CSS and JavaScript. As the new website is still under testing</p>
+      <button onclick="sayHello()">Click Me</button>
+    </section>
 
-    <button onclick="sayHello()">Click Me</button>
+	<section id="about-section" class="hidden">
+		<h2>About Us</h2>
+		<p>Welcome to Video Analysis — your go-to platform for transforming hours of footage into quick, insightful summaries. Our innovative tools streamline video review, saving time and improving accuracy across industries like education, sports, and research.</p>
+
+		<h3>Vision</h3>
+		<hr>
+		<p>Global supplier of AI-driven video analytics solutions, transforming how organizations leverage visual data.</p>
+
+		<p><strong>Mission:</strong> Delivering advanced B2B video and data analytics solutions that drive operational efficiency and enhance customer shopping experiences.</p>
+	</section>
+
+    <section id="contact-section" class="hidden">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or feedback, feel free to reach out to us.</p>
+      <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="10" cols="70" required></textarea><br><br>
+
+        <input type="submit" value="Send">
+      </form>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 My Website</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    function sayHello() {
+      alert("Hello from Video Analysis!");
+    }
+
+    function showSection(section) {
+      document.getElementById("home-section").classList.add("hidden");
+      document.getElementById("about-section").classList.add("hidden");
+      document.getElementById("contact-section").classList.add("hidden");
+
+      document.getElementById(section + "-section").classList.remove("hidden");
+    }
+  </script>
 </body>
 </html>
