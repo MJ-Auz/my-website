@@ -1,40 +1,114 @@
-body {
-  font-family: Arial, sans-serif;
+/* General Reset */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
-  color: #333;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff; /* White background */
+  color: #333333; /* Dark gray text for readability */
+  padding: 0 10px;
+}
+
+/* Header and Navigation */
 header {
-  background: #333;
-  color: white;
-  padding: 1em;
+  background-color: #0056A4; /* Tentronix NZ's blue */
+  padding: 20px;
   text-align: center;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 960px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 5px;
+  color: #ffffff; /* White text */
+}
+
+header h2 {
+  font-size: 1.2em;
+  color: #D1E7F5; /* Light blue for contrast */
+  margin-bottom: 15px;
 }
 
 nav a {
-  color: white;
-  margin: 0 1em;
+  margin: 0 12px;
   text-decoration: none;
+  color: #ffffff; /* White text */
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
+nav a:hover {
+  color: #FFD700; /* Gold color on hover */
+}
+
+/* Main content sections */
 main {
-  padding: 2em;
-  text-align: center;
+  background-color: #F4F4F4; /* Light gray background */
+  padding: 30px;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 960px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
+section {
+  margin-bottom: 30px;
 }
 
-footer {
-  background: #ddd;
-  text-align: center;
-  padding: 1em;
-  position: fixed;
-  bottom: 0;
+/* Contact Form */
+form {
+  margin-top: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
   width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  border: 1px solid #CCCCCC;
+  border-radius: 6px;
+  background-color: #ffffff; /* White background */
+}
+
+input[type="submit"] {
+  background-color: #0056A4; /* Tentronix NZ's blue */
+  color: #ffffff; /* White text */
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #FFD700; /* Gold color on hover */
+  color: #333333; /* Dark text for contrast */
+}
+
+/* Footer */
+footer {
+  background-color: #0056A4; /* Tentronix NZ's blue */
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 960px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  color: #ffffff; /* White text */
+}
+
+/* Utility */
+.hidden {
+  display: none;
 }
